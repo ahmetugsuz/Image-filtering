@@ -1,0 +1,8 @@
+numpy
+pillow
+numba
+line-profiler
+matplotlib
+
+[:python_version < "3.8"]
+importlib-metadata
