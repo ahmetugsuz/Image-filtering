@@ -3,7 +3,7 @@
 This README outlines the python package Instapy.
 
 This application is able to run grayscale and sepia image of a given input image.
-The filtering can be done using implementations done with wither Python, Numba or Numpy;
+The filtering can be done using implementations done with either Python, Numba or Numpy;
 detailing runtime and comparisons between them
 
 ## Prerequisites
