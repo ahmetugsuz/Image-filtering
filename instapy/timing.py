@@ -57,10 +57,10 @@ def make_reports(filename: str = "test/rain.jpg", calls: int = 3):
     # load the image
     image = io.read_image(filename)
     # print the image name, width, height
-    print("Timing performed using", filename[5:9],":",str(image.shape[1])+"x"+str(image.shape[0]))
     # iterate through the filters
     filter_names = ['color2gray', 'color2sepia']
     text_file = open("timing-report.txt", "w")
+    print("Timing performed using", filename[5:9],":",str(image.shape[1])+"x"+str(image.shape[0]), file=text_file)
     for filter_name in filter_names:
         # get the reference filter function
         reference_filter = get_filter(filter_name, "python")  
