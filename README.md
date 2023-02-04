@@ -74,6 +74,9 @@ Will run a numpy implementation on the rain image so that it is filtered to 50% 
 ### Example Run
 Here is a look at how it appears on the default rain picture:
     
-Rain.jpg (Original image):   
+Rain.jpg (Original/default image):   
 ![alt text](https://github.com/ahmetugsuz/Image-filtering/blob/main/test/rain.jpg)
+
+Rain.jpg (Sepia effect): 
+![alt text](https://github.com/ahmetugsuz/Image-filtering/blob/main/sepiaeffect.jpg)
 
