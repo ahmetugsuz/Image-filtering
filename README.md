@@ -2,9 +2,7 @@
 
 This README outlines the python package Instapy.
 
-This application is able to run grayscale and sepia image of a given input image.
-The filtering can be done using implementations done with either Python, Numba or Numpy;
-detailing runtime and comparisons between them
+This program allows users to transform an image by applying a vintage sepia or gray effect. The sepia effect creates a warm brownish-grey hue that gives images an aged, antique appearance, while the gray effect converts the image to black and white. The intensity of the desired effect can be adjusted, and the program offers the ability to scale the image. The program implements the filter using customizable options, providing users with control over the final result.
 
 ## Prerequisites
 
