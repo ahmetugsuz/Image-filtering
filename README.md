@@ -71,3 +71,9 @@ or
 `instapy test/rain.jpg --sepia -r -i numpy --effect 0.5`
 Will run a numpy implementation on the rain image so that it is filtered to 50% effect of the sepia filter from the original, where we also take the runtime of the execution.
 
+### Example Run
+Here is a look at how it appears on the default rain picture:
+
+Rain.jpg (Original image):
+![alt text](https://github.com/ahmetugsuz/Image-filtering/blob/master/test/rain.jpg)
+
