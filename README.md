@@ -1,4 +1,4 @@
-# Instapy
+# Image Filtering Python Package
 
 This README outlines the python package Instapy.
 
