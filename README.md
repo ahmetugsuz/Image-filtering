@@ -31,11 +31,17 @@ To install the package, follow these steps:
 
 1. Clone the git repository containing the source code:  
 ```bash 
-    git clone https://github.com/ahmetugsuz/Image-filtering.git
+git clone https://github.com/ahmetugsuz/Image-filtering.git
 ```
-2. Navigate to the root directory and run:  
+
+2. To ensure that all dependencies are properly installed, you can use the provided `requirements.txt` file. Simply run the following command:
+```bash
+pip install -r requirements.txt
+```
+
+3. Navigate to the root directory and run:  
 ```bash 
-    python3 -m pip install .
+python3 -m pip install .
 ```
 
 ## Usage
@@ -47,7 +53,7 @@ To run unit tests:
 1. Navigate to the root directory (`image-filtering`).
 2. Run the command:  
 ```bash 
-    python3 -m pytest
+python3 -m pytest
 ```
 
 #### Runtime Tests
@@ -55,7 +61,7 @@ To test runtime:
 1. Navigate to the `image-filtering/test` folder.
 2. Run the command:  
 ```bash 
-    python3 -m instapy.timing
+python3 -m instapy.timing
 ```
 This generates a `timing-report.txt` file with the results and prints them in the terminal.
 
@@ -65,7 +71,7 @@ To deploy the package:
 1. Navigate to the `image-filtering` folder.
 2. Run the command:  
 ```bash
-    python3 -m instapy <image_path> <arguments>  
+python3 -m instapy <image_path> <arguments>  
 ```  
 
 Alternatively:
@@ -74,7 +80,7 @@ instapy <image_path> <arguments>
 
 See the full list of arguments using:  
 ```bash 
-    python3 -m instapy --help
+python3 -m instapy --help
 ```
 
 ### Examples
@@ -83,29 +89,29 @@ Here are some example commands:
 
 * Convert an image to gray:  
 ```bash
-    instapy test/rain.jpg --gray
+instapy test/rain.jpg --gray
 ```
 
 * Apply sepia effect to an image:  
 ```bash 
-    instapy test/rain.jpg --sepia
+instapy test/rain.jpg --sepia
 ```
 
 * Save the modified image with a specified filename:
 ```bash 
-    instapy test/rain.jpg --gray -o output_image.jpg
+instapy test/rain.jpg --gray -o output_image.jpg
 ```  
 
 * Scale the image by a factor of 2:  
 ```bash 
-    instapy test/rain.jpg --sepia -sc 2
+instapy test/rain.jpg --sepia -sc 2
 ```  
 
 `-se` wheras `-se` or `--sepia` will turn it to a sepia filter.
 
 * Adjust sepia effect with numpy implementation:
 ```bash 
-    instapy test/rain.jpg --sepia -i numpy --effect 0.5
+instapy test/rain.jpg --sepia -i numpy --effect 0.5
 ```
 
 ### Equivalent arguments
