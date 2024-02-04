@@ -48,14 +48,15 @@ and run:
 ```bash 
 python3 -m pip install .
 ```   
-It can be required to run this command at any changes to the package. 
+After making any changes to the package, it's essential to reinstall it to ensure that the changes take effect. Use the following command above to reinstall the package.
+
 
 ## Usage
 
 ### Deploying
 
 To deploy the package:
-1. Navigate to the `image-filtering` folder (if youre not at the root of the project).
+1. Navigate to the `image-filtering` folder (if youre not at the root of the project):
 ```bash 
 cd image-filtering
 ```    
@@ -73,7 +74,7 @@ instapy <image_path> <arguments>
 
 Where you need to pass arguments for `<image_path>` and `<arguments>`   
 
-See the full list of arguments using:  
+See the full list of arguments, using:  
 ```bash 
 python3 -m instapy --help
 ```   
