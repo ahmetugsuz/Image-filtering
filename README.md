@@ -32,17 +32,21 @@ To install the package, follow these steps:
 1. Clone the git repository containing the source code:  
 ```bash 
 git clone https://github.com/ahmetugsuz/Image-filtering.git
-```
+```   
 
 2. To ensure that all dependencies are properly installed, you can use the provided `requirements.txt` file. Simply run the following command:
 ```bash
 pip install -r requirements.txt
-```
+```   
 
-3. Navigate to the root directory and run:  
+3. Navigate to the root directory:
+```bash 
+cd image-filtering
+```    
+  and run:  
 ```bash 
 python3 -m pip install .
-```
+```   
 
 ## Usage
 
@@ -50,38 +54,51 @@ python3 -m pip install .
 
 #### Unit Tests
 To run unit tests:
-1. Navigate to the root directory (`image-filtering`).
+1. Navigate to the root directory (`image-filtering`)
 2. Run the command:  
 ```bash 
 python3 -m pytest
-```
+```   
 
 #### Runtime Tests
 To test runtime:
 1. Navigate to the `image-filtering/test` folder.
+```bash 
+cd image-filtering/test
+```   
+
 2. Run the command:  
 ```bash 
 python3 -m instapy.timing
-```
+```   
+
 This generates a `timing-report.txt` file with the results and prints them in the terminal.
 
 ### Deploying
 
 To deploy the package:
-1. Navigate to the `image-filtering` folder.
+1. Navigate to the `image-filtering` folder (if youre not there).
+```bash 
+cd image-filtering
+```    
+
 2. Run the command:  
 ```bash
 python3 -m instapy <image_path> <arguments>  
 ```  
+Where you need to pass arguments for `<image_path>` and `<arguments>`  
 
 Alternatively:
-
+```bash
 instapy <image_path> <arguments>
+```  
+
+Where you need to pass arguments for `<image_path>` and `<arguments>`   
 
 See the full list of arguments using:  
 ```bash 
 python3 -m instapy --help
-```
+```   
 
 ### Examples
 
@@ -90,7 +107,7 @@ Here are some example commands:
 * Convert an image to gray:  
 ```bash
 instapy test/rain.jpg --gray
-```
+```   
 
 * Apply sepia effect to an image:  
 ```bash 
@@ -100,7 +117,7 @@ instapy test/rain.jpg --sepia
 * Save the modified image with a specified filename:
 ```bash 
 instapy test/rain.jpg --gray -o output_image.jpg
-```  
+```    
 
 * Scale the image by a factor of 2:  
 ```bash 
@@ -112,7 +129,7 @@ instapy test/rain.jpg --sepia -sc 2
 * Adjust sepia effect with numpy implementation:
 ```bash 
 instapy test/rain.jpg --sepia -i numpy --effect 0.5
-```
+```   
 
 ### Equivalent arguments
 
@@ -146,10 +163,10 @@ Will run a numpy implementation on the rain image so that it is filtered to 50% 
 
 Below are examples of the effects applied to the default rain image:
 
-*Rain.jpg (Original):*
+*Rain.jpg (Original):*  
 ![Original Image](https://github.com/ahmetugsuz/Image-filtering/blob/main/test/rain.jpg)
 
-*Rain.jpg (Gray effect, 100% size, 80% intensity, implemented with numba):*
+*Rain.jpg (Gray effect, 100% size, 80% intensity, implemented with numba):*  
 ![Gray Effect](https://github.com/ahmetugsuz/Image-filtering/blob/main/grayeffect.jpg)
 
 *Rain.jpg (Sepia effect, 120% size, 100% intensity, implemented with numpy):*
