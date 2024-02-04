@@ -48,7 +48,7 @@ and run:
 ```bash 
 python3 -m pip install .
 ```   
-It can be smart/required to run this command if you regularly or at any changes to the package. 
+It can be required to run this command at any changes to the package. 
 
 ## Usage
 
