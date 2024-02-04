@@ -17,8 +17,8 @@ dependencies = [
     'importlib-metadata; python_version<"3.8"', "numpy", "pillow", "numba", "line-profiler", "matplotlib"
 ]
 ```
-
-Required dependencies, u will be guided through how to install the requirements later on on this documentation (ref. Installation, point 2.)
+### Required dependencies
+You will be guided through how to install the requirements later on on this documentation (see. Installation, point 3.)
 
 * [numpy](https://numpy.org/)
 * [line-profiler](https://pypi.org/project/line-profiler/)
@@ -32,18 +32,19 @@ To install the package, follow these steps:
 1. Clone the git repository containing the source code:  
 ```bash 
 git clone https://github.com/ahmetugsuz/Image-filtering.git
-```   
+```    
 
-2. To ensure that all dependencies are properly installed, you can use the provided `requirements.txt` file. Simply run the following command:
-```bash
-pip install -r requirements.txt
-```   
-
-3. Navigate to the root directory:
+2. Navigate to the root directory:
 ```bash 
 cd image-filtering
 ```    
-  and run:  
+
+3. To ensure that all dependencies are properly installed, you can use the provided `requirements.txt` file. Simply run the following command:
+```bash
+pip install -r requirements.txt
+```   
+and run:  
+
 ```bash 
 python3 -m pip install .
 ```   
@@ -53,7 +54,7 @@ python3 -m pip install .
 ### Deploying
 
 To deploy the package:
-1. Navigate to the `image-filtering` folder (if youre not there).
+1. Navigate to the `image-filtering` folder (if youre not at the root of the project).
 ```bash 
 cd image-filtering
 ```    
@@ -62,7 +63,7 @@ cd image-filtering
 ```bash
 python3 -m instapy <image_path> <arguments>  
 ```  
-Where you need to pass arguments for `<image_path>` and `<arguments>`  
+Where you will need to pass arguments for `<image_path>` and `<arguments>`  
 
 Alternatively:
 ```bash
@@ -179,7 +180,6 @@ Below are examples of the effects applied to the default rain image:
 
 *Rain.jpg (Sepia effect, 120% size, 100% intensity, implemented with numpy):*
 ![Sepia Effect](https://github.com/ahmetugsuz/Image-filtering/blob/main/sepiaeffect.jpg)
-
 
 
 
