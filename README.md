@@ -27,6 +27,8 @@ You will be guided through how to install the requirements later on on this docu
 
 ## Installation
 
+### Installing the Package
+
 To install the package, follow these steps:
 
 1. Clone the git repository containing the source code:  
@@ -39,16 +41,47 @@ git clone https://github.com/ahmetugsuz/Image-filtering.git
 cd image-filtering
 ```    
 
-3. To ensure that all dependencies are properly installed, you can use the provided `requirements.txt` file. Simply run the following command:
-```bash
-pip install -r requirements.txt
-```   
-and run:  
-
+3. Install the package and its dependencies:
 ```bash 
 python3 -m pip install .
 ```   
-After making any changes to the package, it's essential to reinstall it to ensure that the changes take effect. Use the following command above to reinstall the package.
+After making any changes to the package, it's essential to reinstall it to ensure that the changes take effect. Use the same command above to reinstall the package.  
+
+### Installing Requirements
+
+If all dependencies is not installed properly by `python3 -m pip install .`, you'll need to install the required Python packages listed in the `requirements.txt` file.
+
+#### Locally
+
+If you're not using a virtual environment, you can install the project dependencies directly using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
+This command will install all the necessary packages globally on your system.
+
+#### Using a Virtual Environment
+
+It's recommended to use a virtual environment to manage project dependencies and isolate them from other projects. 
+If you haven't already, you can create a virtual environment using venv:  
+
+    python -m venv myenv   
+
+* On macOS/Linux:
+```bash
+source myenv/bin/activate
+```
+
+* On Windows:  
+```bash
+myenv\Scripts\activate
+```
+
+Once the virtual environment is activated, you can install the project dependencies using pip:  
+```bash
+pip install -r requirements.txt
+```
 
 
 ## Usage
