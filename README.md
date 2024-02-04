@@ -222,7 +222,12 @@ Below are examples of the effects applied to the default rain image:
 ![Gray Effect](https://github.com/ahmetugsuz/Image-filtering/blob/main/grayeffect.jpg)
 
 *Rain.jpg (Sepia effect, 120% size, 100% intensity, implemented with numpy):*
-![Sepia Effect](https://github.com/ahmetugsuz/Image-filtering/blob/main/sepiaeffect.jpg)
+![Sepia Effect](https://github.com/ahmetugsuz/Image-filtering/blob/main/sepiaeffect.jpg)  
 
 
 
+## Contributing:
+Contributions to the project are welcome! Please contact me on my website: [ahmettu.com](https://ahmettu.com)  
+
+## License:
+This project is licensed under the MIT License. See the LICENSE file for more details.
