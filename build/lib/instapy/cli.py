@@ -28,7 +28,7 @@ def run_filter(
         # Resize image, if needed
         new_width = int((float(image.size[0]) // float(scale)))
         new_height = int((float(image.size[1]) // float(scale)))
-        image = image.resize((new_width, new_height), Image.ANTIALIAS)
+        image = image.resize((new_width, new_height), Image.BILINEAR)
 
     pixels = np.asarray(image)
     # Apply the filter

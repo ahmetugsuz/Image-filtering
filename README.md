@@ -48,6 +48,7 @@ and run:
 ```bash 
 python3 -m pip install .
 ```   
+It can be smart/required to run this command if you regularly or at any changes to the package. 
 
 ## Usage
 
@@ -59,7 +60,7 @@ To deploy the package:
 cd image-filtering
 ```    
 
-2. Run the command:  
+2. Base command to apply a filter or converting a image:  
 ```bash
 python3 -m instapy <image_path> <arguments>  
 ```  
@@ -138,9 +139,9 @@ python3 -m pytest
 
 #### Runtime Tests
 To test runtime:
-1. Navigate to the `image-filtering/test` folder.
+1. Make sure you located at the root of the project `image-filtering`, if not:
 ```bash 
-cd image-filtering/test
+cd image-filtering
 ```   
 
 2. Run the command:  
@@ -148,7 +149,15 @@ cd image-filtering/test
 python3 -m instapy.timing
 ```   
 
-This generates a `timing-report.txt` file with the results and prints them in the terminal.  
+#### Runtime Comparison
+
+Upon execution, the program generates a `timing-report.txt` file and displays the results in the terminal. This report compares the performance of different Python libraries, including:
+
+* **Numba (Numerical Python):** A fundamental package for scientific computing in Python.
+* **NumPy (Numpy-accelerated):** A just-in-time compiler for Python that speeds up numerical computations.
+
+The comparison helps users understand the runtime differences when applying filters using these libraries. Results are provided both in the `timing-report.txt` file and printed directly in the terminal for easy analysis.
+
 
 #### Other deploying examples  
 

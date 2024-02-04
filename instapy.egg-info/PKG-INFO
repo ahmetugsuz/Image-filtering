@@ -31,8 +31,8 @@ dependencies = [
     'importlib-metadata; python_version<"3.8"', "numpy", "pillow", "numba", "line-profiler", "matplotlib"
 ]
 ```
-
-The links to get the required dependencies
+### Required dependencies
+You will be guided through how to install the requirements later on on this documentation (see. Installation, point 3.)
 
 * [numpy](https://numpy.org/)
 * [line-profiler](https://pypi.org/project/line-profiler/)
@@ -46,61 +46,38 @@ To install the package, follow these steps:
 1. Clone the git repository containing the source code:  
 ```bash 
 git clone https://github.com/ahmetugsuz/Image-filtering.git
-```   
+```    
 
-2. To ensure that all dependencies are properly installed, you can use the provided `requirements.txt` file. Simply run the following command:
-```bash
-pip install -r requirements.txt
-```   
-
-3. Navigate to the root directory:
+2. Navigate to the root directory:
 ```bash 
 cd image-filtering
 ```    
-  and run:  
+
+3. To ensure that all dependencies are properly installed, you can use the provided `requirements.txt` file. Simply run the following command:
+```bash
+pip install -r requirements.txt
+```   
+and run:  
+
 ```bash 
 python3 -m pip install .
 ```   
 
 ## Usage
 
-### Running Tests
-
-#### Unit Tests
-To run unit tests:
-1. Navigate to the root directory (`image-filtering`)
-2. Run the command:  
-```bash 
-python3 -m pytest
-```   
-
-#### Runtime Tests
-To test runtime:
-1. Navigate to the `image-filtering/test` folder.
-```bash 
-cd image-filtering/test
-```   
-
-2. Run the command:  
-```bash 
-python3 -m instapy.timing
-```   
-
-This generates a `timing-report.txt` file with the results and prints them in the terminal.
-
 ### Deploying
 
 To deploy the package:
-1. Navigate to the `image-filtering` folder (if youre not there).
+1. Navigate to the `image-filtering` folder (if youre not at the root of the project).
 ```bash 
 cd image-filtering
 ```    
 
-2. Run the command:  
+2. Base command to apply a filter or converting a image:  
 ```bash
 python3 -m instapy <image_path> <arguments>  
 ```  
-Where you need to pass arguments for `<image_path>` and `<arguments>`  
+Where you will need to pass arguments for `<image_path>` and `<arguments>`  
 
 Alternatively:
 ```bash
@@ -116,7 +93,7 @@ python3 -m instapy --help
 
 ### Examples
 
-Here are some example commands:
+Here are some example commands with the default image that follows with this package rain.jpg:
 
 * Convert an image to gray:  
 ```bash
@@ -153,7 +130,39 @@ For convenience, equivalent arguments can be used interchangeably:
 * `-i or --implementation`: Specify the implementation (e.g., numpy, numba).
 * `-r or --runtime`: Measure the runtime of the program.
 
+**Important Note:**
+The primary purpose of this package is to enable users to apply filters to any image of their choice. To achieve this, you need to provide the path to the image you wish to modify. By default, the image is located at `test/rain.jpg`, but you have the flexibility to place it anywhere on your system.
 
+**Usage Instructions:**
+When passing arguments to the package, ensure that you specify the exact path to the image, including its name and file extension. For example, if your image is located in a directory named `images` and is named `my_image.jpg`, you would provide the following path:
+`../path_to_image/images/my_image.jpg`
+
+By following these instructions, you can seamlessly apply filters to any image, regardless of its location on your system.
+
+
+### Running Tests
+
+#### Unit Tests
+To run unit tests:
+1. Navigate to the root directory (`image-filtering`)
+2. Run the command:  
+```bash 
+python3 -m pytest
+```   
+
+#### Runtime Tests
+To test runtime:
+1. Navigate to the `image-filtering/test` folder.
+```bash 
+cd image-filtering/test
+```   
+
+2. Run the command:  
+```bash 
+python3 -m instapy.timing
+```   
+
+This generates a `timing-report.txt` file with the results and prints them in the terminal.  
 
 #### Other deploying examples  
 
@@ -187,86 +196,4 @@ Below are examples of the effects applied to the default rain image:
 ![Sepia Effect](https://github.com/ahmetugsuz/Image-filtering/blob/main/sepiaeffect.jpg)
 
 
-# Image Filtering Python Package
-
-This README outlines the python package Instapy.
-
-This program allows users to transform an image by applying a vintage sepia or gray effect. The sepia effect creates a warm brownish-grey hue that gives images an aged, antique appearance, while the gray effect converts the image to black and white. The intensity of the desired effect can be adjusted, and the program offers the ability to scale the image. The program implements the filter using customizable options, providing users with control over the final result.
-
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Pip](https://pypi.org/project/pip/)
-* [setuptools](https://pypi.org/project/setuptools/)
-
-### Dependencies
-```
-dependencies = [
-    'importlib-metadata; python_version<"3.8"', "numpy", "pillow", "numba", "line-profiler", "matplotlib"
-]
-```
-
-* [numpy](https://numpy.org/)
-* [line-profiler](https://pypi.org/project/line-profiler/)
-* [Pillow](https://pillow.readthedocs.io/en/stable/)
-* [Matplotlib](https://matplotlib.org)
-
-## Installation
-
-* `git clone https://github.com/ahmetugsuz/Image-filtering.git` git repository containing the sourcecode
-* from the root simply run
-* `python3 -m pip install .`
-
-## Running
-
-### Running Tests
-
-#### Unit Tests
-* navigate to the root: image-filtering
-* `python3 -m pytest` / `pytest`
-
-#### Runtime
-* navigate to folder image-filtering/test
-* `python3 -m instapy.timing`
-  the file `timing-report.txt` will contain the results
-  and it would print it out on the terminal
-
-### Deploying
-
-* navigate to folder image-filtering
-* `python3 -m instapy <image_path> <arguments>` or `instapy <image_path> <arguments>`
-  See full list of arguments using `python3 -m instapy --help`
-  `Note:` The `<image_path>` can be "test/rain.jpg" as its the default image who is in the directory, but more images can be added later on if it's preffered.
-
-
-By writing `instapy test/rain.jpg` you will get the rain image in gray tone since it is on default (you can also give the argument `-g or --gray` to have a gray filter on the image), you switch to sepia by typing `instapy test/rain.jpg -se` wheras `-se` or `--sepia` will turn it to a sepia filter.
-If you want to check out all commands or need help, you can type `instapy -h'` or `instapy --help'`.
-Note that when you want to save the image, you write `instapy test/rain.jpg -o {filename}.jpg`, here you must state the name of the file you are saving, you must also provide an argument for the command `-sc { float}` which scales the image, or if you want to try out different implementations between `python/numpy/numba`, you must specify which implementation you want with the following command `-i or --implementation`. Remember that `--file` (or `-f`) is required field so you must type in at least `instapy test/rain.jpg` to be able to run the program. If you want to time how long the program takes to execute, you can enter `-r or --runtime` without any arguments. The program has also been extended so that you can enter effects on a sepia image that are implemented with numpy, of which you give a `k` value of how much effect you want between 0-1 which corresponds to 0-100%. If you want to adjust the effect of sepia, you can enter `instapy test/rain.jpg -se -i numpy -e {effect/k: float}`.
-
-#### deploying examples
-`python3 -m instapy test/rain.jpg -o test_file.jpg -se -sc 0.5 -i numpy`
-Will save an image rain called "test_file.jpg" on sepia filter, where it is 2x larger than normal, implemnted/run with numpy.
-
-or
-
-`python3 -m instapy test/rain.jpg --gray -sc 2 -r`
-Will show rain image on gray filter where it is half as large, where we also print out the runtime on the terminal.
-
-or 
-
-`instapy test/rain.jpg --sepia -r -i numpy --effect 0.5`
-Will run a numpy implementation on the rain image so that it is filtered to 50% effect of the sepia filter from the original, where we also take the runtime of the execution.
-
-### Example Run
-Here is a look at how it appears on the default rain picture:
-    
-Rain.jpg (Original/default image):   
-![alt text](https://github.com/ahmetugsuz/Image-filtering/blob/main/test/rain.jpg)
-
-Rain.jpg (Gray effect, size 100%, 80% gray effect, implemented with numba)
-![alt text](https://github.com/ahmetugsuz/Image-filtering/blob/main/grayeffect.jpg)
-
-Rain.jpg (Sepia effect, resized scale 20% larger, 100% sepia effect, implemented with numpy): 
-![alt text](https://github.com/ahmetugsuz/Image-filtering/blob/main/sepiaeffect.jpg)
 
